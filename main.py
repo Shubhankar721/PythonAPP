@@ -42,6 +42,6 @@ if uploaded_file is not None:
                 else:
                     st.error(f"Error: The selected column '{y_columns}' does not exist in the filtered data.")
         else:
-            st.error(f"Error:choose both x-axis and y-axis different" )
+            st.error(f"NOTE :choose both x-axis and y-axis different" )
 else:
     st.write("Wainting for file to upload...!") 
