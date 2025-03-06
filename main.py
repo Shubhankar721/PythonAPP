@@ -23,9 +23,7 @@ if uploaded_file is not None:
     filtered_df = df[df[selected_columns] == selected_values]
     st.write(filtered_df)
 
-    st.subheader("Plot data")
-    x_columns = st.selectbox("Select x-axis column",columns)
-    y_columns = st.selectbox("Select y-axis column",columns)
+  
 
     if filtered_df.empty:
         st.warning("No data matches the selected filter.")
