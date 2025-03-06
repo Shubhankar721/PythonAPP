@@ -28,6 +28,9 @@ if uploaded_file is not None:
     y_columns = st.selectbox("Select y-axis column",columns)
 
     if st.button("Generate Plot"):
-        st.line_chart(filtered_df.set_index(x_columns)[y_columns])
+        if x_columns in filtered_df.columns and y_columns in filtered_df.columns:
+            st.line_chart(filtered_df.set_index(x_columns)[y_columns])
+        else:
+            st.error(f"Error: The selected column '{y_columns}' does not exist in the filtered data.")
 else:
     st.write("Wainting for fileto upload...!") 
